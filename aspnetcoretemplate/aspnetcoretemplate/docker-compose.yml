@@ -3,18 +3,18 @@
 version: '2'
 
 services:
-app:
-build:
-context:  ./
-dockerfile: Dockerfile
-https-portal:
-image: steveltn/https-portal:1
-ports:
-- '80:80'
-- '443:443'
-links:
-- app
-restart: always
-environment:
-DOMAINS: '139.59.137.247 -> http://app:50511'
-STAGE: 'production'
+  app:
+    build:
+      context:  ./
+      dockerfile: Dockerfile
+  https-portal:
+    image: steveltn/https-portal:1
+    ports:
+      - '80:80'
+      - '443:443'
+    links:
+      - app
+    restart: always
+    environment:
+      DOMAINS: '139.59.137.247 -> http://app:50511'
+      STAGE: 'production'

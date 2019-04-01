@@ -5,7 +5,7 @@ EXPOSE 50511
 
 FROM microsoft/dotnet:2.2-sdk AS build
 WORKDIR /src
-COPY ["aspnetcoretemplate/aspnetcoretemplate.csproj", "aspnetcoretemplate/"]
+COPY ["aspnetcoretemplate.csproj", "aspnetcoretemplate/"]
 RUN dotnet restore "aspnetcoretemplate/aspnetcoretemplate.csproj"
 COPY . .
 WORKDIR "/src/aspnetcoretemplate"

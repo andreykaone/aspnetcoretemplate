@@ -16,5 +16,5 @@ links:
 - app
 restart: always
 environment:
-DOMAINS: 'alpacatracker.com -> http://app:5000'
+DOMAINS: '139.59.137.247 -> http://app:5000'
 STAGE: 'production'
